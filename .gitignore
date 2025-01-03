@@ -1,0 +1,14 @@
+downloads/
+.env
+*.db
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+async_io_demo.py
+*-shm
+*-wal
+dist/
+TODO.md
+*.sh

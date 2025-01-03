@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SITE_TITLE}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" />
+</head>
+
+<body>
+
+    <main>
+        <h1>{{SITE_TITLE}}</h1>
+        <div class="row">
+
+            <section class="offset-lg-2 col-lg-8">
+                {% for article in articles %}
+                <article class="border" id="{{article.id}}">
+                    <header>{{loop.index}}: {{article.title}}</header>
+                    <div>{{article.open_ai}}</div>
+                    <footer><small>{{article.published_at}}</small></footer>
+                </article>
+                {% endfor %}
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <article>
+            <small>Generated: {{_TIMESTAMP}} / {{ENVIRONMENT}}</small>
+        </article>
+    </footer>
+</body>
+
+</html>

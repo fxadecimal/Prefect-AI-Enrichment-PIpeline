@@ -1,0 +1,17 @@
+
+requests
+python-dotenv
+
+# etl / data
+prefect
+sqlalchemy
+alembic
+python-slugify
+# PyMySQL
+
+# ai
+openai 
+
+# site generation
+jinja2
+jinjanator

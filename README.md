@@ -39,7 +39,6 @@ alembic
 
 - Dockerize w/ postgres
 - Async flows
--
 
 # Appendix
 
@@ -50,3 +49,7 @@ alembic upgrade head
 echo .dump | sqlite3 downloads.db
 
 ```
+
+## References
+
+- https://github.com/valiantlynx/ollama-docker

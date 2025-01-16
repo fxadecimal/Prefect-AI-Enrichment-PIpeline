@@ -1,17 +1,17 @@
-
-requests
-python-dotenv
-
 # etl / data
-prefect
-sqlalchemy
-alembic
-python-slugify
+prefect==3.1.10
+sqlalchemy==2.0.36
+alembic==1.14.0
+python-slugify==8.0.4
 # PyMySQL
 
 # ai
-openai 
+openai==1.58.1
+ollama==0.4.5
 
 # site generation
-jinja2
-jinjanator
+jinja2==3.1.5
+
+#other
+requests
+python-dotenv==1.0.1

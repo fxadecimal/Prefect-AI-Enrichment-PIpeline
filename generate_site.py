@@ -14,9 +14,12 @@ OUTPUT_DIR = BASE_DIR / os.getenv("HTML_OUTPUT_DIR")
 OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
 
 
-def generate_html_jinja(context: dict = {}, output_filename="index.html") -> Path:
+def generate_html_jinja(
+    context: dict = {}, output_filename="index.html", output_dir: Path = OUTPUT_DIR
+) -> Path:
     global CONFIG
     context.update(CONFIG)
+    output_dir = Path(output_dir)
     # Create the Jinja2 environment
     env = Environment(loader=FileSystemLoader("templates"))
 
@@ -36,9 +39,9 @@ def generate_html_jinja(context: dict = {}, output_filename="index.html") -> Pat
     rendered = template.render(**context)
 
     # Write the rendered content to index.html
-    output_path = OUTPUT_DIR / output_filename
+    output_path = output_dir / output_filename
 
-    print(f"Writing to {output_path.relative_to(BASE_DIR)}")
+    print(f"Writing to {output_path}")
 
     with open(output_path, "w") as f:
         f.write(rendered)

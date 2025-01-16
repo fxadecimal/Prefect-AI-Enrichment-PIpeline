@@ -12,3 +12,5 @@ async_io_demo.py
 dist/
 TODO.md
 *.sh
+.dev/
+.git*/
